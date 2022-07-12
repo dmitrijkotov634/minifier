@@ -56,7 +56,7 @@ def decode_string(string):
 
 def encode_string(string):
     text, manifest = encode(string)
-    return "\n".join([json.dumps(manifest), text])
+    return json.dumps(manifest) + "\n" + text
 
 
 if __name__ == '__main__':
